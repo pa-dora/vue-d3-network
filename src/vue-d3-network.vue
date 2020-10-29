@@ -359,7 +359,12 @@ export default {
     },
     // -- Render helpers
     nodeClick (event, node) {
+      console.log("test");
       this.$emit('node-click', event, node)
+    },
+    nodeHover: function nodeHover(event, node) {
+      console.log(node);
+      this.$emit('node-hover', event, node);
     },
     linkClick (event, link) {
       this.$emit('link-click', event, link)
